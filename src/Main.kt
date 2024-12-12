@@ -34,16 +34,16 @@ fun main() = with(System.`in`.bufferedReader()) {
         while (true) {
             try {
                 val input = readLine()
-                val element = input.toInt()
-                require(element in 1..99) {"$element 가 1보다 작고 100보다 큽니다"}
+                val element = input.toInt() //이 과정에서 실패 시 NumberFormatException 예외 발생
+                require(element in 1..99) {"$element 가 1보다 작고 100보다 큽니다"} //require문 실패시 IllegalArgException 예외 발생
                 if(element > maxNum) {
                     maxNum = element
                     index = i
                 }
                 break
-            } catch (ex: NumberFormatException) { // 입력값이 숫자가 아닐 때 예외처리
+            } catch (ex: NumberFormatException) {
                 println(ex.message)
-            } catch (ex: IllegalArgumentException) { //require 가 발생시키는 IllegalArgumentException 에 대한 예외 처리
+            } catch (ex: IllegalArgumentException) {
                 println(ex.message)
             } //ex: Exception 에서 Exception 은 모든 예외를 처리하지만 예외 원인 알기 어려워서 위처럼 예외를 케이스에 맞게 구분
         }
