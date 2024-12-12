@@ -6,7 +6,7 @@ fun main() = with(System.`in`.bufferedReader()) {
             //입력 처리
             val (N, X) = readLine().split(" ").map { it.toInt() }
             require(N in 1..10000 && X in 1..10000) {"N과 X 1~10000 숫자로 입력해 주세요"}
-            var line: List<Int> = emptyList()
+            var line: List<Int>
             line = readLine().split(" ").map { it.toInt() }
             require(line.size == N) {"입력 받을 수 있는 숫자의 갯수는 $N 개 입니다"}
 
