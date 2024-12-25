@@ -7,12 +7,11 @@ fun main() = with(System.`in`.bufferedReader()) {
     while (true) {
         try {
             val value = readLine().toInt()
-            require(value in 1..1000) {"1~1000사이의 숫자를 입력해주세요"}
+            require(value in 1..10000) {"1~1000사이의 숫자를 입력해주세요"}
             if (value % 10 != 0) {
                 println(-1)
                 break
             }
-
 
             val count300 = value / 300
             val count60 = (value % 300) / 60
