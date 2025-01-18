@@ -16,6 +16,7 @@ fun main() = with(System.`in`.bufferedReader()) {
             require(value[1] in 1..1000) {"1~1000사이의 숫자를 입력해주세요"}
             //수열 생성
             //git test입니다
+            //git test수정입니다
             val result = mutableListOf<Int>()
             for(i in 1..value[1]) {
                 for(j in 1..i) {
