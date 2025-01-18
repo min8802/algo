@@ -22,7 +22,7 @@ fun main() = with(System.`in`.bufferedReader()) {
                     result+=i
                 }
             }
-
+            // git test입니다 다른곳에 삽입 충돌
             //수열 원하는 구간 더하기
             val sumNum = result.slice(value[0]-1..value[1]-1).sum()//sum 함수가 받을 수 있는 타입 정해져있음
             println(sumNum)
