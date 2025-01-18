@@ -15,7 +15,7 @@ fun main() = with(System.`in`.bufferedReader()) {
                         paper[x+dx][y+dy] = 1
                     }
                 }
-
+                //2563 git test입니다
             }
             for (a in 0..99) {
                 for (b in 0..99) {
